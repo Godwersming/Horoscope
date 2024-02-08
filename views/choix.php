@@ -7,10 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
-        <select name="Liste" id="">
-                <option value=""> </option>
-            </select>
+    <form method="post" action="index.php?action=reponse">
+        <select name="liste">
+            <?php foreach ($signe as $cle => $valeur) :?>
+            <option value="<?= $cle?>"><?=$cle?></option>
+            <?php endforeach ?>
+    </select>
             <input type="submit" name="OK">
     </form>
 </body>
